@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta  name="description" content ="Table to store student grades">
+<style>
+h1 {
+  text-align: center;
+    padding-top: 12px;
+  padding-bottom: 12px;
+     background-color: #1a53ff;
+      border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
+
+.th{
+  text-align : center;
+    
+  
+}
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1a53ff;
+    color:black;
+}
+
+.result1 ,.result2,.result3,.result4,.result5,.result6,.result7,.result8
+,.result9,.result10 {
+  text-align : right;
+  
+}
+
+.final1, .final2, .final3, .final4,.final5,.fainal6,.final7,.final8,.final9,.final10 {
+  text-align : right;
+  
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+
+ #table tr:nth-child(even) {background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+
+button {
+  
+ float: center;
+   	border-radius: 8px;
+     background-color:#1a53ff;; /* Blue*/
+    border: 1px solid black;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover{background-color: #1a2dff;}
+
+div{
+    text-align:center;
+}
+
+td:empty:before{
+  content :"-" 
+}
+
+
+</style>
+<head>
+<body>
+
+<h1>CS230 Assignment 1</h1>
+
+<div class="table">
+  <table id="table">
+  <thead>
+    <tr>
+    <th>Student Name</th>
+    <th>Student ID</th> 
+    <th >Assignment 1</th>
+    <th>Assignment 2</th>
+    <th>Assignment 3</th>
+    <th>Assignment 4</th>
+     <th>Assignment 5</th>
+     <th>Final Grade %</th>
+    <tr>
+    </thead>
+   
+    <tr>
+    <td>John Smith</td>
+    <td>1332467</td>
+     <td class="result1" contenteditable="true"></td>
+      <td class="result1" contenteditable="true"></td>
+       <td class="result1" contenteditable="true"></td>
+      <td class="result1" contenteditable="true"></td>
+         <td class="result1" contenteditable="true"></td>
+          <td class="final1"></td>                  
+    <tr>
+    
+     <tr>
+    <td>Paul Watts</td>
+    <td>1330067</td>
+      <td class="result2" contenteditable="true"></td>
+      <td class="result2" contenteditable="true"></td>
+       <td class="result2" contenteditable="true"></td>
+      <td class="result2" contenteditable="true"></td>
+         <td class="result2" contenteditable="true"></td>
+          <td class="final2"></td>                     
+    <tr>
+    <tr>
+    <td>Danny Heffernan</td>
+    <td>133009877</td>
+      <td class="result3" contenteditable="true"></td>
+      <td class="result3" contenteditable="true"></td>
+       <td class="result3" contenteditable="true"></td>
+      <td class="result3" contenteditable="true"></td>
+         <td class="result3" contenteditable="true"></td>
+          <td class="final3"></td>                       
+    <tr>
+    
+    <tr>
+    <td>Jiri Vala</td>
+    <td>133067854</td>
+     <td class="result4" contenteditable="true"></td>
+      <td class="result4" contenteditable="true"></td>
+       <td class="result4" contenteditable="true"></td>
+      <td class="result4" contenteditable="true"></td>
+         <td class="result4" contenteditable="true"></td>
+          <td class="final4"></td>                     
+    <tr>
+    
+    
+    <tr>
+    <td>Jonivar Skullerd</td>
+    <td>13345654</td>
+      <td class="result5" contenteditable="true"></td>
+      <td class="result5" contenteditable="true"></td>
+       <td class="result5" contenteditable="true"></td>
+      <td class="result5" contenteditable="true"></td>
+         <td class="result5" contenteditable="true"></td>
+          <td class="final5"></td>                     
+    <tr>
+    
+      <tr>
+    <td>Joost Slingerland</td>
+    <td>13334859</td>
+      <td class="result6" contenteditable="true"></td>
+      <td class="result6" contenteditable="true"></td>
+       <td class="result6" contenteditable="true"></td>
+      <td class="result6" contenteditable="true"></td>
+         <td class="result6" contenteditable="true"></td>
+          <td class="final6"></td>                      
+    <tr>
+    
+    <tr>
+    <td>Masud Hauge</td>
+    <td>13300352</td>
+      <td class="result7" contenteditable="true"></td>
+      <td class="result7" contenteditable="true"></td>
+       <td class="result7" contenteditable="true"></td>
+      <td class="result7" contenteditable="true"></td>
+         <td class="result7" contenteditable="true"></td>
+          <td class="final7"></td>                     
+    <tr>
+    
+      <tr >
+    <td>Aoughus McCabe</td>
+    <td>13306785</td>
+     <td class="result8" contenteditable="true"></td>
+      <td class="result8" contenteditable="true"></td>
+       <td class="result8" contenteditable="true"></td>
+      <td class="result8" contenteditable="true"></td>
+         <td class="result8" contenteditable="true"></td>
+          <td class="final8"></td>                      
+    <tr>
+    
+      <tr>
+    <td>Brian Dolan</td>
+    <td>13320187</td>
+      <td class="result9" contenteditable="true"></td>
+      <td class="result9" contenteditable="true"></td>
+       <td class="result9" contenteditable="true"></td>
+      <td class="result9" contenteditable="true"></td>
+         <td class="result9" contenteditable="true"></td>
+          <td class="final9"></td>                     
+    <tr>
+    
+      <tr>
+    <td>John Brennan</td>
+    <td>13305674</td>
+      <td class="result10" contenteditable="true"></td>
+      <td class="result10" contenteditable="true"></td>
+       <td class="result10" contenteditable="true"></td>
+      <td class="result10" contenteditable="true"></td>
+         <td class="result10" contenteditable="true"></td>
+          <td class="final10"></td>                     
+    <tr>    
+        
+ <table>
+ </div>
+ <div class="button" >
+ <button onclick="calculate();" type="button">Calculate</button>
+ </div>
+ 
+ <script>
+	function calculate() {
+	 alert();
+var table = document.getElementById('table');
+
+for (var i = 1;i<=11; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+    var sum=0;
+    var row; 
+   // row = table.rows[i];
+   for (var j = 2; j<7;j++) {
+     //iterate through columns
+     //columns would be accessed using the "col" variable assigned in the for loop
+    
+     var col;
+     col =document.getElementById('table').rows[i].cells[j];
+     if(table.rows[i].cells[j]=="-"){
+     col=0;
+     }
+     sum= sum+col;
+   }  
+   
+   var perc= (sum/5);
+   perc= Math.round(perc);
+   
+   if( perc < 40){
+	    		document.getElementById('table').rows[i].cells[j].style.BackgroundColor = "red";
+
+document.getElementById('table').rows[i].cells[j].style.Color = "White";
+                  
+	    	}
+   
+   table.row[i].cells[7] = perc+"%";
+}
+
+}
+ 
+ </script>
+<body>
+<html>

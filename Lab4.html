@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<style>
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+
+.stuff{
+    padding: 16px;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.quizzes{
+  
+  display:none ;
+  
+  
+}
+.English{
+  
+   display:none ;
+}
+
+
+
+</style>
+<html>
+
+<div id="01">
+<h1>Welcome to Yoga Quiz!!!!!</h1>   
+    
+<div>
+<label for="email"><b>Email</b></label>
+<br>
+<input   type="text" placeholder="Enter Email" name="email" required>
+</div>
+<br>
+<!--
+<div>
+<label for="password"><b>Password</b></label>
+<br>
+<input   type="text" placeholder="Enter Password" name="password" required>
+</div>
+-->
+
+<br>
+
+ <button type="submit" onclick="document.getElementById('01').style.display='none';document.getElementById('02').style.display='block'" >Login</button>
+ <br>
+ 
+<label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+   </label>
+     
+     <br>
+     <br>
+     
+     
+<div class="stuff">     
+      <button type="button" class="cancelbtn">Cancel</button>
+     <!-- <span class="psw"><a href="#">Forgot password?</a></span>-->
+     </div>    
+     
+  </div>   
+  
+     
+     <div class="quizzes" id="02">
+     
+     <div>
+		<button class="EnglishQuiz"onclick="document.getElementById('02').style.display='none';document.getElementById('03').style.display='block';EnglishContent();"> English Quiz</button>
+		<button class="SanskritQuiz" onclick="document.getElementById('02').style.display='none' "> Sanskrit Quiz</button>
+		</div>
+     
+     </div>
+     
+     
+     <div class="English" id="03">
+     <h1>Select the Correct Name of the Yoga Position Shown</h1>
+     
+     <picture id="Engimage">
+  
+  <img src=""  style="width:auto;">
+</picture>
+
+
+  <div>
+		<input id="1" type="submit" onclick="answer(this)" value="">
+			<input id="2" type="submit" onclick="answer(this)" value="">
+    	<input id="3" type="submit" onclick="answer(this)" value="">
+			<input id="4" type="submit" onclick="answer(this)" value="">
+		</div>
+
+
+
+
+     
+     </div>
+     
+     
+     
+
+     
+     <script>
+	 
+	var English =[
+{ name: 'Split Flow', image: 'card1.jpg' },{ name: 'Akarna Dhanurasana Flow', image: 'card2.jpg' },{ name: 'Seated Twist Flow', image: 'card3.jpg' },{ name: 'One Leg Back Bend to Shoulderstand Flow', image: 'card4.jpg' },{ name: 'Side Stretch Flow with a Twist', image: 'card5.jpg' }, { name: 'Cair Vingas Flow', image: 'card6.jpg' },{ name: 'Akarna Dhanurasana Flow ', image: 'card7.jpg' },{ name: 'Hip Circles with Lateral Stretches', image: 'card8.jpg' },{ name: 'Hanumanasana Leg Vingasa', image: 'card9.jpg' }, { name: 'Akarna Dhanurasana Flow', image: 'card10.jpg' }, { name: 'Triangle to Warrior Flow', image: 'card11.jpg' },{ name: 'Camel Flow', image: 'card12.jpg' },{ name: 'Half Flow Lotus to Splits', image: 'card13.jpg' },{ name: 'Revolving Hand Lotus', image: 'card14.jpg' },{ name: 'Inner Groin Vingasa', image: 'card15.jpg' },{ name: 'Kromchasana Hamstring Flow', image: 'card16.jpg' },{ name: 'Side Balance Split Flow', image: 'card17.jpg' },{ name: 'Chair Vingasa Yoga Flow', image: 'card18.jpg' }, { name: 'Plough Vingasa Yoga Flow', image: 'card19.jpg' },{ name: 'Lifted Leg Vingasa', image: 'card20.jpg' },{ name: 'Here to Pigeon Flow', image: 'card21.jpg' },{ name: 'Low Back Flow', image: 'card22.jpg' },{ name: 'Side Shoulder Flow', image: 'card23.jpg' },{ name: 'Rocking Back Flow', image: 'card24.jpg' },{ name: 'Twisted Cresent Moon', image: 'card25.jpg' },{ name: 'Half Moon to Warrior', image: 'card26.jpg' },{ name: 'Back Bend Sequence', image: 'card27.jpg' },
+];
+
+var namenum;
+//var imagenum;
+var EngQCorrect=0;
+var EngQIncorrect=0;
+
+
+ EnglishContent=function(){
+
+ var num= Math.floor((Math.random() * 26) );
+console.log(num);
+ //  imagenum= English[num].image;
+ namenum=English[num].name;
+console.log(namenum);
+
+//document.getElementById("Engimage").innerHTML= "imagenum";
+ var x= Math.floor((Math.random() * 4)+1 );
+ document.getElementById(x).value = namenum;
+ 
+ for(var i=1; i<=4;i++){
+ 
+ 		if(document.getElementById(i).value == ""){
+    
+    var y= Math.floor((Math.random() * 26) );
+    var other=English[y].name
+    document.getElementById(i).value = other;
+    }
+ 
+ }
+ 
+ 
+}
+
+
+answer= function(z){
+
+ //var check= document.getElementById(z);
+
+ if(z.value!=namenum){
+ console.log(z.value);
+ console.log(namenum);
+  EngQIncorrect=EngQIncorrect+1;
+ 
+ }
+else{ 
+	EngCorrect=EngCorrect+1;
+}
+
+}
+
+
+	 
+	 </script>
+     
+</html>
